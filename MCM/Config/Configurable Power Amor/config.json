@@ -1,0 +1,212 @@
+{
+  "modName": "ConfigurablePowerArmor",
+  "displayName": "Configurable Power Armor",
+  "minMcmVersion": 1,
+  "pluginRequirements": ["ConfigurablePowerArmor.esp"],
+  "content": [
+    {
+	  "text": "Configurable Power Armor",
+	  "type": "section"
+	},
+	{
+	  "text": "Welcome to Configurable Power Armor 2.3! Here you can set the core drain options.  Click on the other MCM page to set various Power Armor attributes.",
+	  "type": "text"
+	},
+	{ "type": "spacer" },
+	{
+	  "id": "fCPACoreDrainEvent:Events",
+	  "text": "Base Power Armor Core Drain",
+	  "type": "slider",
+	  "help": "Lower than 1 will make the core drain slower.  Above 1 will increase drain.",
+	  "valueOptions": {
+		"min": 0,
+		"max": 3,
+		"step": 0.01,
+		"sourceType": "GlobalValue",
+		"sourceForm": "ConfigurablePowerArmor.esp|1ECC"
+	  }
+	},
+	{
+	  "text": "An overall setting - this affects every action from a power armor suit that drains the core. (Default 1)",
+	  "type": "text"
+	},
+	
+	{ "type": "spacer" },
+	{
+	  "id": "fCPADrainPerImpactEvent:Events",
+	  "text": "Core Drain per Impact Landing",
+	  "type": "slider",
+	  "help": "Adds a drain amount for each time you land from a high fall. (Default 0)",
+	  "valueOptions": {
+		"min": 0,
+		"max": 1,
+		"step": 0.01,
+		"sourceType": "GlobalValue",
+		"sourceForm": "ConfigurablePowerArmor.esp|2666"
+	  }
+	},
+	{
+	  "text": "Core Drain per Impact Landing affects the amount of drain each time you land from a high fall.",
+	  "type": "text"
+	}
+  ],
+  "pages": [
+	{
+      "pageDisplayName": "Power Armor Attributes",
+      "content": [
+        {
+          "text": "Additional Power Armor Attributes",
+          "type": "section"
+        },
+		{
+		  "id": "fCPAHealthEvent:Events",
+		  "text": "Power Armor Additional Health",
+		  "type": "slider",
+		  "help": "Changes the amount of additional health you have while in power armor. (Default 0)",
+		  "valueOptions": {
+			"min": 0,
+			"max": 1000,
+			"step": 10,
+			"sourceType": "GlobalValue",
+			"sourceForm": "ConfigurablePowerArmor.esp|4C72"
+		  }
+		},
+		{
+		  "id": "fCPAAPEvent:Events",
+		  "text": "Power Armor Additional Action Points",
+		  "type": "slider",
+		  "help": "Changes the amount of additional action points you have while in power armor. (Default 0)",
+		  "valueOptions": {
+			"min": 0,
+			"max": 500,
+			"step": 5,
+			"sourceType": "GlobalValue",
+			"sourceForm": "ConfigurablePowerArmor.esp|4C74"
+		  }
+		},
+		{
+		  "id": "fCPADamageMultEvent:Events",
+		  "text": "Power Armor Damage Multiplier",
+		  "type": "slider",
+		  "help": "Changes the amount of damage you take in power armor by this multiplier. (Default 1)",
+		  "valueOptions": {
+			"min": 0,
+			"max": 3,
+			"step": 0.01,
+			"sourceType": "GlobalValue",
+			"sourceForm": "ConfigurablePowerArmor.esp|2667"
+		  }
+		},
+		{
+		  "id": "fCPACarryWeightEvent:Events",
+		  "text": "Power Armor Additional Carry Weight",
+		  "type": "slider",
+		  "help": "Adds additional carry weight by this amount when you are in power armor. (Default 0)",
+		  "valueOptions": {
+			"min": 0,
+			"max": 1000,
+			"step": 10,
+			"sourceType": "GlobalValue",
+			"sourceForm": "ConfigurablePowerArmor.esp|2E04"
+		  }
+		},
+		{
+		  "id": "fCPASpeedMultEvent:Events",
+		  "text": "Power Armor Speed Multiplier",
+		  "type": "slider",
+		  "help": "Changes the speed of your character while in power armor. (Default 100)",
+		  "valueOptions": {
+			"min": 10,
+			"max": 1000,
+			"step": 5,
+			"sourceType": "GlobalValue",
+			"sourceForm": "ConfigurablePowerArmor.esp|2E03"
+		  }
+		},
+		{
+		  "id": "fCPAJumpHeightEvent:Events",
+		  "text": "Power Armor Jump Height Multiplier",
+		  "type": "slider",
+		  "help": "Changes the jump height in power armor by this multiplier. (Default 1)",
+		  "valueOptions": {
+			"min": 1,
+			"max": 20,
+			"step": 0.1,
+			"sourceType": "GlobalValue",
+			"sourceForm": "ConfigurablePowerArmor.esp|2E02"
+		  }
+		},
+		{ "type": "spacer" },
+		{
+          "text": "Jetpack Settings",
+          "type": "section"
+        },
+		{
+		  "id": "fCPAJetpackDrainInitialEvent:Events",
+		  "text": "Initial Jetpack Action Point Cost",
+		  "type": "slider",
+		  "help": "Changes the action point drain on the initial burst of thrust. (Default 64)",
+		  "valueOptions": {
+			"min": 0,
+			"max": 150,
+			"step": 1,
+			"sourceType": "GlobalValue",
+			"sourceForm": "ConfigurablePowerArmor.esp|3D3A"
+		  }
+		},
+		{
+		  "id": "fCPAJetpackDrainSustained:Events",
+		  "text": "Sustained Jetpack Action Point Cost",
+		  "type": "slider",
+		  "help": "Changes the action point drain for sustained usage after the initial burst. (Default 64)",
+		  "valueOptions": {
+			"min": 0,
+			"max": 150,
+			"step": 1,
+			"sourceType": "GlobalValue",
+			"sourceForm": "ConfigurablePowerArmor.esp|3D3B"
+		  }
+		},
+		{
+		  "id": "fCPAJetpackThrustInitialEvent:Events",
+		  "text": "Jetpack Initial Thrust Strength",
+		  "type": "slider",
+		  "help": "Changes the strength on the initial burst of thrust. (Default 768)",
+		  "valueOptions": {
+			"min": 50,
+			"max": 1000,
+			"step": 1,
+			"sourceType": "GlobalValue",
+			"sourceForm": "ConfigurablePowerArmor.esp|3D3C"
+		  }
+		},
+		{
+		  "id": "fCPAJetpackTimeToSustainedEvent:Events",
+		  "text": "Jetpack Initial Thrust Length",
+		  "type": "slider",
+		  "help": "Changes the length in seconds of the initial thrust. (Default 0.15)",
+		  "valueOptions": {
+			"min": 0,
+			"max": 10,
+			"step": 0.05,
+			"sourceType": "GlobalValue",
+			"sourceForm": "ConfigurablePowerArmor.esp|3D3D"
+		  }
+		},
+		{
+		  "id": "fCPAJetpackThrustSustainedEvent:Events",
+		  "text": "Jetpack Sustained Thrust Strength",
+		  "type": "slider",
+		  "help": "Changes the strength of the sustained thrust after the initial burst. (Default 85)",
+		  "valueOptions": {
+			"min": 50,
+			"max": 1000,
+			"step": 1,
+			"sourceType": "GlobalValue",
+			"sourceForm": "ConfigurablePowerArmor.esp|3D3E"
+		  }
+		}
+      ]
+    }
+  ]
+}
